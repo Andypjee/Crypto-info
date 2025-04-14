@@ -10,7 +10,7 @@ function App() {
 
     return (
         <>
-            <div>obuewf</div>
+
             <Header />
 
 

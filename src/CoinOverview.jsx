@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './CoinOverview.css';
-import Footer from "./Footer"; // Voeg de footer import toe
-import Favo from "./Favo"; // Voeg de Favo import toe
+import Footer from "./Footer";
+import Favo from "./Favo";
 
 function CoinOverview() {
     const [coins, setCoins] = useState([]);
