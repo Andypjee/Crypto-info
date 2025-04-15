@@ -1,12 +1,12 @@
 // Favo.jsx
 import React from 'react';
 
-function favo({ favorite, addToFavorites }) {
+function Favo({ favorite, addToFavorites }) {
     return (
         <div>
             <h1>Favorites</h1>
             {favorite.length === 0 ? (
-                <p>No favorites added yet.</p>
+                <p></p>
             ) : (
                 favorite.map((favoCoin, index) => (
                     <h2 key={index}>{favoCoin}</h2>
