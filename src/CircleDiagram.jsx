@@ -1,15 +1,14 @@
 import React from "react";
-import { Pie } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import {Pie} from "react-chartjs-2";
+import {Chart as ChartJS, ArcElement, Tooltip, Legend} from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-function CircleDiagram({ coins }) {
+function CircleDiagram({coins}) {
 
-    // eerste 10 coins
     const topCoins = coins.slice(0, 10);
 
-    // heeft een kleur aan de coin
+
     const chartData = {
         labels: topCoins.map(coin => coin.NAME),
         datasets: [
@@ -23,9 +22,9 @@ function CircleDiagram({ coins }) {
     };
 
     return (
-        <div className="circle-diagram" style={{ width: '30%', margin: '0 auto' }}>
-            <h2>Top 10 Marketcap</h2>
-            <Pie data={chartData} />
+        <div className="circle-diagram" style={{width: '50%', margin: '2rem auto'}}>
+            <h2>Top 10 Coins by Price</h2>
+            <Pie data={chartData}/>
         </div>
     );
 }

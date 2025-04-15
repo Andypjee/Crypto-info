@@ -1,9 +1,9 @@
-// CoinOverview.jsx
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './CoinOverview.css';
 import Footer from "./Footer";
 import Favo from "./Favo";
+import CircleDiagram from "./CircleDiagram"; // ✅ NEW IMPORT
 
 function CoinOverview() {
     const [coins, setCoins] = useState([]);
@@ -62,6 +62,9 @@ function CoinOverview() {
 
                 <h1>Crypto Overview</h1>
 
+               
+                <CircleDiagram coins={coins} />
+
                 {filteredCoins.length === 0 ? (
                     <p>Geen munten gevonden die overeenkomen met: "{searchQuery}"</p>
                 ) : (
@@ -87,7 +90,7 @@ function CoinOverview() {
                 </div>
             </div>
 
-            <Footer /> {/* Footer toevoegen */}
+            <Footer />
         </>
     );
 }
